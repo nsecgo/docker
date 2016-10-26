@@ -7,9 +7,9 @@ ENV GOLANG_SRC_URL https://storage.googleapis.com/golang/go$GOLANG_VERSION.linux
 
 RUN apt update && apt install -y \
 	gcc \
-    wget \
+    	wget \
 	git \
-    libc-dev \
+    	libc-dev \
 	&& wget -q "$GOLANG_SRC_URL" -O golang.tar.gz \
 	&& tar -C /usr/local -xzf golang.tar.gz \
 	&& rm golang.tar.gz
